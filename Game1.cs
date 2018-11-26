@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Torment.Components;
+using System;
 using Torment.utils;
 
 namespace Torment
@@ -46,6 +47,7 @@ namespace Torment
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             go = new GameObject(0, "test", new TransformComponent(Vector2.Zero, go), new SpriteComponent("creepybear", Content, go));
+            Console.WriteLine(go.Transform.Parent.EntityName);
             //Serializer.Serialize(go.EntityName);
         }
 

@@ -9,7 +9,7 @@ namespace Torment.Components
         public Vector2 Position { get; set; }
         public GameObject Parent { get; set; }
         
-        private readonly Vector2 _grav = new Vector2(0, 1);
+        private readonly Vector2 _grav = new Vector2(0, 9.8f);
         
         public float MaxJumpHeight { get;}
         

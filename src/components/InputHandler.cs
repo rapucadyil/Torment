@@ -7,48 +7,41 @@ namespace Torment.Components
     [Serializable]
     public class InputHandler : IComponent
     {
-        
-        /*
-         *
-         *GIT HUB TEST
-         * 
-         */
-        
-        
         public GameObject Parent { get; set; }
 
-        private bool _isJumping;
-        
+        public Vector2 JumpForce { get; set; }
+
+        /*Set up keybinds*/
+        Keys rightKey = Keys.D;
+        Keys leftKey = Keys.A;
+        Keys jumpKey = Keys.Space;
+
+        KeyboardState oldState;
         public InputHandler(GameObject parent)
         {
             this.Parent = parent;
+            oldState = Keyboard.GetState();
+            JumpForce = new Vector2(0, -200);   // TODO (rj): tweak this value when implementing floor collision
         }
 
         public void HandleUserInput(Vector2 velocity)
         {
             KeyboardState state = Keyboard.GetState();
-            KeyboardState oldState = new KeyboardState();
-            if (state.IsKeyDown(Keys.Left))
+            if (state.IsKeyDown(leftKey))
             {
                 Parent.Transform.Move(-velocity);
             }
 
-            if (state.IsKeyDown(Keys.Right))
+            if (state.IsKeyDown(rightKey))
             {
                 Parent.Transform.Move(velocity);
             }
 
-            if (state.IsKeyDown(Keys.Up) && oldState.IsKeyUp(Keys.Up))
+            if (state.IsKeyDown(jumpKey) && oldState.IsKeyUp(jumpKey))
             {
-                Parent.Transform.Move(new Vector2(0, -10));
+                Parent.Transform.Move(JumpForce);
             }
-
-            if (state.IsKeyUp(Keys.Up) && oldState.IsKeyDown(Keys.Up))
-            {
-                Parent.Transform.Move(new Vector2(0, 10));
-            }
-
-            state = oldState;
+            oldState = state;
 
         }
 

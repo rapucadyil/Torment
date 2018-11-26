@@ -23,7 +23,7 @@ namespace Torment
 
         private  Vector2 _horizontalSpeed;
         private  Vector2 _verticalSpeed;
-        
+
         /// <summary>
         /// Default constructor 
         /// </summary>
@@ -63,7 +63,7 @@ namespace Torment
         public void Tick(GameTime gameTime)
         {
             KeyboardState state = Keyboard.GetState();
-            //this.Transform.PhysicsUpdate();
+            this.Transform.PhysicsUpdate();
             Input.HandleUserInput(_horizontalSpeed);
             Console.Write("ticking..." + gameTime.ElapsedGameTime.ToString());
         
