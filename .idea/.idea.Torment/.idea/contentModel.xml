@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Dev\Torment" t="IncludeRecursive">
+      <e p="app.manifest" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Content" t="Include">
+        <e p="Content.mgcb" t="Include" />
+      </e>
+      <e p="Game1.cs" t="Include" />
+      <e p="Icon.ico" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="src" t="Include">
+        <e p="components" t="Include">
+          <e p="IComponent.cs" t="Include" />
+          <e p="InputHandler.cs" t="Include" />
+          <e p="SpriteComponent.cs" t="Include" />
+          <e p="TransformComponent.cs" t="Include" />
+        </e>
+        <e p="GameObject.cs" t="Include" />
+        <e p="IGameState.cs" t="Include" />
+        <e p="MainMenuState.cs" t="Include" />
+        <e p="utils" t="Include">
+          <e p="Serializer.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Torment.csproj" t="IncludeRecursive" />
+    </e>
+    <e p="C:\Users\RJ-Graphics\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\RJ-Graphics\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Torment.-997075684.00" t="ExcludeRecursive" />
+  </component>
+</project>
