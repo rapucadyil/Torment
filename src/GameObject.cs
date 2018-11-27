@@ -21,7 +21,7 @@ namespace Torment
         public SpriteComponent Sprite { get; set; }
         public InputHandler Input { get; set; }
 
-        private  Vector2 _horizontalSpeed;
+        private  readonly Vector2 _horizontalSpeed;
         private  Vector2 _verticalSpeed;
 
         /// <summary>
@@ -31,8 +31,10 @@ namespace Torment
         {
             EntityID = 0;
             EntityName = "dummy";
-            Transform = new TransformComponent(this);
+            Transform = new TransformComponent();
+            Transform.Parent = this;
             Sprite = null;    //TODO: make this a default sprite.
+            Sprite.Parent = this;
             Input = new InputHandler(this);
             _horizontalSpeed = new Vector2(5,0);
             _verticalSpeed = new Vector2(0,5);
@@ -51,7 +53,9 @@ namespace Torment
             EntityID = id;
             EntityName = name;
             Transform = pos;
+            Transform.Parent = this;
             Sprite = spr;
+            Sprite.Parent = this;
             Input = new InputHandler(this);
             _horizontalSpeed = new Vector2(5,0);
             _verticalSpeed = new Vector2(0,5);
@@ -66,7 +70,6 @@ namespace Torment
             this.Transform.PhysicsUpdate();
             Input.HandleUserInput(_horizontalSpeed);
             Console.Write("ticking..." + gameTime.ElapsedGameTime.ToString());
-        
         }
         
         public void Draw(SpriteBatch spriteBatch)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Torment/Content/20s_bubba_run_anim_1.png</SourceFile>
-  <SourceTime>2018-11-26T22:25:46.8373469+01:00</SourceTime>
-  <DestFile>D:/Torment/Content/bin/Windows/Content/bubba.xnb</DestFile>
-  <DestTime>2018-11-26T23:04:53.5680388+01:00</DestTime>
+  <SourceFile>C:/Dev/Torment/Content/20s_bubba_run_anim_1.png</SourceFile>
+  <SourceTime>2018-09-13T20:06:17+02:00</SourceTime>
+  <DestFile>C:/Dev/Torment/Content/bin/Windows/Content/bubba.xnb</DestFile>
+  <DestTime>2018-11-27T08:36:30.6880356+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T23:55:52+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

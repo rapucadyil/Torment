@@ -4,8 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Torment/Content/20s_bubba_run_anim_1.png</File>
-    <File>D:/Torment/Content/creepy bear mkII.png</File>
+    <File>C:/Dev/Torment/Content/20s_bubba_run_anim_1.png</File>
+    <File>C:/Dev/Torment/Content/creepy bear mkII.png</File>
   </SourceFiles>
   <DestFiles>
     <File>bubba.png</File>

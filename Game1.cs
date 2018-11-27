@@ -46,7 +46,7 @@ namespace Torment
         {            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            go = new GameObject(0, "test", new TransformComponent(Vector2.Zero, go), new SpriteComponent("creepybear", Content, go));
+            go = new GameObject(0, "test", new TransformComponent(Vector2.Zero), new SpriteComponent("creepybear", Content));
             Console.WriteLine(go.Transform.Parent.EntityName);
             //Serializer.Serialize(go.EntityName);
         }

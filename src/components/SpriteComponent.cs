@@ -13,10 +13,9 @@ namespace Torment.Components
         public Texture2D Sprite { get; set; }
         public GameObject Parent { get; set; }
 
-        public SpriteComponent(string file, ContentManager content, GameObject parent)
+        public SpriteComponent(string file, ContentManager content)
         {
             Sprite = content.Load<Texture2D>(file);
-            this.Parent = parent;
         }
 
         public void Render(SpriteBatch spriteBatch, Vector2 pos)

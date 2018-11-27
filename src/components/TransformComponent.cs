@@ -13,17 +13,15 @@ namespace Torment.Components
         
         public float MaxJumpHeight { get;}
         
-        public TransformComponent(GameObject parent)
+        public TransformComponent()
         {
             this.Position = Vector2.Zero;
-            this.Parent = parent;
             MaxJumpHeight = this.Position.Y + 10;
         }
 
-        public TransformComponent(Vector2 position, GameObject parent)
+        public TransformComponent(Vector2 position)
         {
             this.Position = position;
-            this.Parent = parent;
             MaxJumpHeight = this.Position.Y + 10;
         }
 

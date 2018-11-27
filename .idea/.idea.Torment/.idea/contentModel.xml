@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\RJ\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\RJ\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Torment.575475202.00" t="ExcludeRecursive" />
-    <e p="D:\Torment" t="IncludeRecursive">
+    <e p="C:\Dev\Torment" t="IncludeRecursive">
       <e p="app.manifest" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Content" t="Include">
@@ -33,5 +31,7 @@
       </e>
       <e p="Torment.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\RJ-Graphics\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\RJ-Graphics\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Torment.-997075684.00" t="ExcludeRecursive" />
   </component>
 </project>

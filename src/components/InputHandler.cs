@@ -11,7 +11,7 @@ namespace Torment.Components
 
         public Vector2 JumpForce { get; set; }
 
-        /*Set up keybinds*/
+        /*Set up key-binds*/
         Keys rightKey = Keys.D;
         Keys leftKey = Keys.A;
         Keys jumpKey = Keys.Space;
