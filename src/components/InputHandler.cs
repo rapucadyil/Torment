@@ -30,11 +30,13 @@ namespace Torment.Components
             if (state.IsKeyDown(leftKey))
             {
                 Parent.Transform.Move(-velocity);
+                Parent.Sprite.FacingDir = -1;
             }
 
             if (state.IsKeyDown(rightKey))
             {
                 Parent.Transform.Move(velocity);
+                Parent.Sprite.FacingDir = 1;
             }
 
             if (state.IsKeyDown(jumpKey) && oldState.IsKeyUp(jumpKey))

@@ -9,10 +9,9 @@ namespace Torment.States
         public string StateType { get; set; }
         public List<GameObject> Entities { get; set; }
 
-        public MainMenuState(List<GameObject> _entities)
+        public MainMenuState()
         {
             this.StateType = "Main Menu";
-            this.Entities = _entities;
         }
         
         

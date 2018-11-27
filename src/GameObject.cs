@@ -11,6 +11,9 @@ namespace Torment
     /// <summary>
     /// Default class for an entity inside of the game i.e. Player, Enemies, NPCs etc...
     /// </summary>
+
+    //TODO(rj): test todo
+
     [XmlRoot("root")]
     public class GameObject
     {
@@ -67,7 +70,7 @@ namespace Torment
         public void Tick(GameTime gameTime)
         {
             KeyboardState state = Keyboard.GetState();
-            this.Transform.PhysicsUpdate();
+            Transform.PhysicsUpdate();
             Input.HandleUserInput(_horizontalSpeed);
             Console.Write("ticking..." + gameTime.ElapsedGameTime.ToString());
         }

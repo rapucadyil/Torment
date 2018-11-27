@@ -3,6 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Torment.Components;
 using System;
+using System.Collections.Generic;
+using Torment.States;
 using Torment.utils;
 
 namespace Torment
@@ -15,12 +17,15 @@ namespace Torment
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private GameObject go;
+        private List<IGameState> _levels  = new List<IGameState>();
+        private IGameState _currentState;
+        
         
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
         }
 
         /// <summary>
@@ -46,9 +51,16 @@ namespace Torment
         {            
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            go = new GameObject(0, "test", new TransformComponent(Vector2.Zero), new SpriteComponent("creepybear", Content));
-            Console.WriteLine(go.Transform.Parent.EntityName);
             //Serializer.Serialize(go.EntityName);
+            
+            #region Setting up of first level (main menu)
+            var mainMenu = new MainMenuState();
+            mainMenu.Entities = new List<GameObject>();
+            mainMenu.Entities.Add(new GameObject(0, "test", 
+                new TransformComponent(Vector2.Zero), new SpriteComponent("creepybear", Content)));
+            this._levels.Add(mainMenu);
+            this._currentState = _levels[0];
+            #endregion
         }
 
         /// <summary>
@@ -68,7 +80,7 @@ namespace Torment
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            go.Tick(gameTime);
+            _currentState.Tick(gameTime);
             base.Update(gameTime);
         }
 
@@ -82,7 +94,7 @@ namespace Torment
 
             spriteBatch.Begin();
             // TODO(rj): do all drawing code here.
-            go.Draw(spriteBatch);
+            _currentState.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
